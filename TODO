@@ -1,0 +1,43 @@
+Recap of work: @critical
+
+    ☐ Make unitary tests @high
+
+    
+    Step 1
+    ☐ List all todos
+
+    ☐ Display only the title and the checkbox of the todo
+
+    ☐ Create some fake examples of todos
+
+    Step 2
+
+    ☐ check / uncheck a todo via a checkbox
+    
+    ☐ If a todo is checked, then put it at the end of the list
+    
+    ☐ If a todo is checked, then crossed out it <= ( = barré )
+
+
+
+    Step 3
+
+    ☐ Being able to click on a todo and being redirected on the page of the todo selected
+
+    ☐ Being able to access to that todo directly by url
+
+    Step 4
+
+    ☐ Add a TODO :
+        ☐ A title is required
+        ☐ A field for the description possibly empty
+        ☐ The new todo is in the top of the list after submitting
+
+Recap of work optional until now @low :
+    ☐ Create a backend for possible save the data
+
+    ☐ Create a wrong route if the todo id doesn't exist in the url
+
+    ☐ Make a design
+
+    ☐ Add a optional feature if possible
