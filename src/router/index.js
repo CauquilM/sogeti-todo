@@ -12,7 +12,7 @@ const routes = [
     component: Todo,
   },
   {
-    path: "/todo-details",
+    path: "/todo-details/:id",
     name: "TodoDetails",
     component: TodoDetails,
   },
