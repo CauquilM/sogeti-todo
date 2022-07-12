@@ -42,6 +42,8 @@ Recap of work: @critical
 Bugs: @high
     ☐ When unchecked, the function moveToTheEnd is called again
 
+    ☐ When using route, error => a promise was rejected with a non-error
+
 
 Recap of work optional until now @low :
     ☐ Create a backend for possible save the data
