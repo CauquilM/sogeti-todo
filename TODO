@@ -73,7 +73,7 @@ Recap of work optional until now @low :
 
     ☐ Create a backend for possible save the data
 
-    ☐ Create a wrong route if the todo id doesn't exist in the url
+    ✔ Create a wrong route if the todo id doesn't exist in the url @done(22-07-13 01:56)
 
     ✔ Make a design @done(22-07-12 08:49)
 
