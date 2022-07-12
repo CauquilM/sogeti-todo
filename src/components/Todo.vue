@@ -1,12 +1,16 @@
 <template>
   <div>
     <div
-      class="todoTest"
       v-for="todo in todoArray"
       :key="todo.id"
       :style="todo.done ? 'text-decoration: line-through' : ''"
     >
-      <span>{{todo.title}}</span>
+      <!-- <span>{{todo.title}}</span> -->
+      <router-link
+        class="todoTest"
+        :to="{ name: 'TodoDetails', params: { id: todo.id, title: todo.title, description: todo.description } }"
+        >{{ todo.title }}</router-link
+      >
       <input
         type="checkbox"
         v-model="todo.done"
@@ -21,13 +25,15 @@ export default {
   data() {
     return {
       todoArray: [
-        { id: 1, title: "My first Article", done: false },
-        { id: 2, title: "My second Article", done: false },
-        { id: 3, title: "My third Article", done: false },
-        { id: 4, title: "My fourth Article", done: false },
-        { id: 5, title: "My fifth Article", done: false },
-        { id: 6, title: "My sixth Article", done: false },
+        { id: 1, title: "My first Article", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", done: false },
+        { id: 2, title: "My second Article", description: "", done: false },
+        { id: 3, title: "My third Article", description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", done: false },
+        { id: 4, title: "My fourth Article", description: "", done: false },
+        { id: 5, title: "My fifth Article", description: "", done: false },
+        { id: 6, title: "My sixth Article", description: "", done: false },
       ],
+      id: 7
+      
     };
   },
   methods: {
