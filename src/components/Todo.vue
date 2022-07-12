@@ -42,7 +42,14 @@
       <v-list dense>
         <v-subheader>Todo List</v-subheader>
         <v-list-item-group color="primary">
-          <v-list-item class="pa-2" v-for="todo in todoStored" :key="todo.id" router :to="`/todo-details/${todo.id}`">
+          <v-list-item class="pa-2" v-for="todo in todoStored" :key="todo.id" router :to="{
+          name: 'TodoDetails',
+          params: {
+            id: todo.id,
+            title: todo.title,
+            description: todo.description,
+          },
+        }">
             <v-list-item-content>
               <v-list-item-title v-text="todo.title"></v-list-item-title>
             </v-list-item-content>
