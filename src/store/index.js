@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -28,8 +28,19 @@ export default new Vuex.Store({
     id: 7,
   },
   mutations: {
-    
+    SET_TODO_STATE(state, id) {
+      const index = state.todoStored.findIndex((object) => {
+        return object.id === id;
+      });
+      console.log(`id ${id}, index ${index} array ${state.todoStored}`);
+      state.todoStored = state.todoStored.concat(
+        state.todoStored.splice(index, 1)
+      );
+    },
   },
   actions: {
+    modifyTodoState(context, id) {
+      context.commit(SET_TODO_STATE, id);
+    },
   },
-})
+});

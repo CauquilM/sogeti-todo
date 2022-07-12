@@ -30,13 +30,13 @@
       <input
         type="checkbox"
         v-model="todo.done"
-        @change="moveToTheEnd(todo.id)"
+        @change="modifyTodoState(todo.id)"
       />
     </div>
   </div>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   name: "Todo",
@@ -53,13 +53,7 @@ export default {
   },
 
   methods: {
-    moveToTheEnd(id) {
-      const index = this.todoArray.findIndex((object) => {
-        return object.id === id;
-      });
-      console.log(`id ${id}, index ${index} array ${this.todoArray}`);
-      this.todoArray = this.todoArray.concat(this.todoArray.splice(index, 1));
-    },
+    ...mapActions(["modifyTodoState"]),
     createNewTodo() {
       if (!this.title) {
         return (this.error = "Don't forget the title :)");
