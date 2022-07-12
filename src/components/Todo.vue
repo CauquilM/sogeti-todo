@@ -5,7 +5,7 @@
     <h2>Todo creation</h2>
     <input v-model="title" placeholder="Todo title" />
     <input v-model="description" placeholder="Description (optional)" />
-    <button @click="createNewTodo">Submit</button>
+    <button @click="createNewTodo({title, description})">Submit</button>
     <p v-if="error">{{ error }}</p>
 
     <h2>Todo List</h2>
@@ -14,7 +14,6 @@
       :key="todo.id"
       :style="todo.done ? 'text-decoration: line-through' : ''"
     >
-      <!-- <span>{{todo.title}}</span> -->
       <router-link
         class="todoTest"
         :to="{
@@ -36,10 +35,7 @@
   </div>
 </template>
 <script>
-import {
-  mapActions,
-  mapState,
-} from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   name: "Todo",
@@ -47,32 +43,15 @@ export default {
     return {
       title: "",
       description: "",
-      error: "",
     };
   },
   computed: {
-    ...mapState(["todoStored"]),
+    ...mapState(["todoStored", "error"]),
   },
 
   methods: {
-    ...mapActions(["modifyTodoState"]),
-    createNewTodo() {
-      if (!this.title) {
-        return (this.error = "Don't forget the title :)");
-      } else {
-        this.error = "";
-        this.todoArray.unshift({
-          id: this.id++,
-          title: this.title,
-          description: this.description,
-          done: false,
-        });
-      }
-    },
+    ...mapActions(["modifyTodoState", "createNewTodo"]),
   },
-  //   created() {
-  //     this.getDataFromStore();
-  //   },
 };
 </script>
 <style>

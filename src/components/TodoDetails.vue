@@ -1,9 +1,12 @@
 <template>
   <div class="main">
-    <h1>Todo Details</h1>
-    <h2>Title: {{ title }}</h2>
-    <p v-if="description != ''">Description: {{ description }}</p>
-    <p v-else>Without Description</p>
+    <div>
+      <h1>Todo Details</h1>
+      <router-link to="/">Return to main page</router-link>
+      <h2>Title: {{ title }}</h2>
+      <p v-if="description != ''">Description: {{ description }}</p>
+      <p v-else>Without Description</p>
+    </div>
   </div>
 </template>
 <script>

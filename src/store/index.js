@@ -26,6 +26,9 @@ export default new Vuex.Store({
       { id: 6, title: "My sixth Article", description: "", done: false },
     ],
     id: 7,
+    title: "",
+    description: "",
+    error: ""
   },
   mutations: {
     SET_TODO_STATE(state, id) {
@@ -37,10 +40,26 @@ export default new Vuex.Store({
         state.todoStored.splice(index, 1)
       );
     },
+    SET_NEW_TODO(state, { title, description }) {
+      if (!title) {
+        return (state.error = "Don't forget the title :)");
+      } else {
+        state.error = "";
+        state.todoStored.unshift({
+          id: state.id++,
+          title: title,
+          description: description,
+          done: false,
+        });
+      }
+    },
   },
   actions: {
     modifyTodoState(context, id) {
       context.commit("SET_TODO_STATE", id);
+    },
+    createNewTodo(context, { title, description }) {
+      context.commit("SET_NEW_TODO", { title, description });
     },
   },
 });
