@@ -1,10 +1,10 @@
 <template>
   <div class="main">
     <div>
-      <h1>Todo Details</h1>
-      <router-link to="/">Return to main page</router-link>
-      <h2>Title: {{ title }}</h2>
-      <p v-if="description != ''">Description: {{ description }}</p>
+      <h1 class="white--text py-3">Todo Details</h1>
+      <v-btn router to='/'>Return to main page</v-btn>
+      <h2 class="white--text py-3">Title: {{ title }}</h2>
+      <p class="white--text" v-if="description != ''">Description: {{ description }}</p>
       <p v-else>Without Description</p>
     </div>
   </div>
