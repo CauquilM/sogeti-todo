@@ -59,6 +59,12 @@ Bugs: @high
     ☐ When clicking on a todo details, leaving and coming back with the brower arrows, it doesn't display anything
 
 Recap of work optional until now @low :
+    ☐ Night Mode
+
+    ☐ Add a cute error with vuetify
+
+    ☐ Make the responsive
+
     ☐ Change Website title
 
     ☐ Change the input for description by a textfield

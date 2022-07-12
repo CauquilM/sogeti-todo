@@ -1,14 +1,14 @@
 <template>
   <div class="main">
-    <h1>Todo List App</h1>
+    <h1 class="white--text">Todo List App</h1>
 
-    <h2>Todo creation</h2>
-    <input v-model="title" placeholder="Todo title" />
-    <input v-model="description" placeholder="Description (optional)" />
-    <button @click="createNewTodo({title, description})">Submit</button>
-    <p v-if="error">{{ error }}</p>
+    <h2 class="white--text">Todo creation</h2>
+    <input class="white--text" v-model="title" placeholder="Todo title" />
+    <input class="white--text" v-model="description" placeholder="Description (optional)" />
+    <button class="white--text" @click="createNewTodo({title, description})">Submit</button>
+    <p class="white--text" v-if="error">{{ error }}</p>
 
-    <h2>Todo List</h2>
+    <h2 class="white--text">Todo List</h2>
     <div
       v-for="todo in todoStored"
       :key="todo.id"
