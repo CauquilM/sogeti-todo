@@ -25,7 +25,7 @@
         <v-subheader>Todo List</v-subheader>
         <v-list-item-group color="primary">
           <v-list-item
-            class="pa-2"
+            class="pa-2 testToDetails"
             v-for="todo in todoStored"
             :key="todo.id"
             router

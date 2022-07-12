@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import Vue from "vue";
 import Vuex from "vuex";
 import Todo from "@/components/Todo.vue";
+import Vue from "vue";
 Vue.config.silent = true;
 
 const localVue = createLocalVue();
