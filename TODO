@@ -35,9 +35,9 @@ Recap of work: @critical
     Step 4
 
     ☐ Add a TODO :
-        ☐ A title is required
-        ☐ A field for the description possibly empty
-        ☐ The new todo is in the top of the list after submitting
+        ✔ A title is required @done(22-07-12 03:37)
+        ✔ A field for the description possibly empty @done(22-07-12 03:37)
+        ✔ The new todo is in the top of the list after submitting @done(22-07-12 03:37)
 
 Bugs: @high
     ☐ When unchecked, the function moveToTheEnd is called again
@@ -46,6 +46,10 @@ Bugs: @high
 
 
 Recap of work optional until now @low :
+    ☐ Change Website title
+
+    ☐ Change favicon
+
     ☐ Create a backend for possible save the data
 
     ☐ Create a wrong route if the todo id doesn't exist in the url

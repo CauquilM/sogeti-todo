@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <p>Title: {{title}}</p>
-    <p> Description: {{description}}</p>
+  <div class="main">
+    <h1>Todo Details</h1>
+    <h2>Title: {{ title }}</h2>
+    <p>Description: {{ description }}</p>
   </div>
 </template>
 <script>
@@ -24,3 +25,8 @@ export default {
   },
 };
 </script>
+<style>
+.main {
+  text-align: center;
+}
+</style>
