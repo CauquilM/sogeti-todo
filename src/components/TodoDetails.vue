@@ -2,7 +2,8 @@
   <div class="main">
     <h1>Todo Details</h1>
     <h2>Title: {{ title }}</h2>
-    <p>Description: {{ description }}</p>
+    <p v-if="description != ''">Description: {{ description }}</p>
+    <p v-else>Without Description</p>
   </div>
 </template>
 <script>
@@ -17,11 +18,7 @@ export default {
 
   created() {
     this.title = this.$route.params.title;
-    if (this.$route.description != "") {
-      this.description = this.$route.params.description;
-    } else {
-      this.description = "Sans Description";
-    }
+    this.description = this.$route.params.description;
   },
 };
 </script>
