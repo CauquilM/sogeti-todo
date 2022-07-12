@@ -65,9 +65,9 @@ Recap of work optional until now @low :
 
     ☐ Make the responsive
 
-    ☐ Change Website title
+    ✔ Change Website title @done(22-07-12 08:49)
 
-    ☐ Change the input for description by a textfield
+    ✔ Change the input for description by a textfield @done(22-07-12 08:49)
 
     ☐ Change favicon
 
@@ -75,9 +75,8 @@ Recap of work optional until now @low :
 
     ☐ Create a wrong route if the todo id doesn't exist in the url
 
-    ☐ Make a design
+    ✔ Make a design @done(22-07-12 08:49)
 
-    ☐ Add a optional feature if possible
 
     ☐ When the todo is unchecked put it at his former place
         Or
