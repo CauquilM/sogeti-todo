@@ -1,14 +1,20 @@
 <template>
-  <div class="main">
+  <v-container class="main">
     <h1 class="white--text">Todo List App</h1>
 
-    <h2 class="white--text">Todo creation</h2>
-    <input class="white--text" v-model="title" placeholder="Todo title" />
-    <input class="white--text" v-model="description" placeholder="Description (optional)" />
-    <button class="white--text" @click="createNewTodo({title, description})">Submit</button>
+    <h2 class="white--text pb-3">Todo creation</h2>
+
+    <v-text-field solo class="white--text" v-model="title" label="Todo title" />
+    <v-textarea
+      solo
+      class="white--text"
+      v-model="description"
+      label="Description (optional)"
+    />
+    <v-btn @click="createNewTodo({ title, description })"> Submit </v-btn>
     <p class="white--text" v-if="error">{{ error }}</p>
 
-    <h2 class="white--text">Todo List</h2>
+    <!-- <h2 class="white--text">Todo List</h2>
     <div
       v-for="todo in todoStored"
       :key="todo.id"
@@ -31,8 +37,20 @@
         v-model="todo.done"
         @change="modifyTodoState(todo.id)"
       />
-    </div>
-  </div>
+    </div> -->
+    <v-card class="mx-auto mt-8" max-width="300" shaped>
+      <v-list dense>
+        <v-subheader>Todo List</v-subheader>
+        <v-list-item-group color="primary">
+          <v-list-item class="pa-2" v-for="todo in todoStored" :key="todo.id" router :to="`/todo-details/${todo.id}`">
+            <v-list-item-content>
+              <v-list-item-title v-text="todo.title"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-card>
+  </v-container>
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
