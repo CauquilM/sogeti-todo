@@ -4,10 +4,10 @@
 
     <h2 class="white--text pb-3">Todo creation</h2>
 
-    <v-text-field solo class="white--text" v-model="title" label="Todo title" />
+    <v-text-field solo class="white--text testTitle" v-model="title" label="Todo title" />
     <v-textarea
       solo
-      class="white--text"
+      class="white--text testDescription"
       v-model="description"
       label="Description (optional)"
     />
