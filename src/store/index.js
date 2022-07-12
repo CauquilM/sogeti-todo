@@ -28,7 +28,7 @@ export default new Vuex.Store({
     id: 7,
     title: "",
     description: "",
-    error: ""
+    errorMsg: ""
   },
   mutations: {
     SET_TODO_STATE(state, id) {
@@ -42,9 +42,9 @@ export default new Vuex.Store({
     },
     SET_NEW_TODO(state, { title, description }) {
       if (!title) {
-        return (state.error = "Don't forget the title :)");
+        return (state.errorMsg = "Don't forget the title :)");
       } else {
-        state.error = "";
+        state.errorMsg = "";
         state.todoStored.unshift({
           id: state.id++,
           title: title,

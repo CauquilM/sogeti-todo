@@ -16,6 +16,11 @@ const routes = [
     name: "TodoDetails",
     component: TodoDetails,
   },
+  {
+    path: "/:pathMatch(.*)",
+    name: "PageNotFound",
+    component: Todo,
+  },
 ];
 
 const router = new VueRouter({

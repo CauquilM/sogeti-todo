@@ -61,7 +61,7 @@ Bugs: @high
 Recap of work optional until now @low :
     ☐ Night Mode
 
-    ☐ Add a cute error with vuetify
+    ✔ Add a cute error with vuetify @done(22-07-12 08:56)
 
     ☐ Make the responsive
 
@@ -76,7 +76,6 @@ Recap of work optional until now @low :
     ☐ Create a wrong route if the todo id doesn't exist in the url
 
     ✔ Make a design @done(22-07-12 08:49)
-
 
     ☐ When the todo is unchecked put it at his former place
         Or

@@ -14,36 +14,12 @@
     <v-row class="pb-3">
       <v-spacer />
       <v-col md="6">
-        <v-alert v-if="error" type="error">{{ error }}</v-alert>
+        <v-alert class="testErrorMsg" v-if="errorMsg" type="error">{{ errorMsg }}</v-alert>
       </v-col>
       <v-spacer />
     </v-row>
-    <v-btn @click="createNewTodo({ title, description })"> Submit </v-btn>
+    <v-btn class="testError" @click="createNewTodo({ title, description })"> Submit </v-btn>
 
-    <!-- <h2 class="white--text">Todo List</h2>
-    <div
-      v-for="todo in todoStored"
-      :key="todo.id"
-      :style="todo.done ? 'text-decoration: line-through' : ''"
-    >
-      <router-link
-        class="todoTest"
-        :to="{
-          name: 'TodoDetails',
-          params: {
-            id: todo.id,
-            title: todo.title,
-            description: todo.description,
-          },
-        }"
-        >{{ todo.title }}</router-link
-      >
-      <input
-        type="checkbox"
-        v-model="todo.done"
-        @change="modifyTodoState(todo.id)"
-      />
-    </div> -->
     <v-card class="mx-auto mt-8" max-width="300" shaped>
       <v-list dense>
         <v-subheader>Todo List</v-subheader>
@@ -83,7 +59,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["todoStored", "error"]),
+    ...mapState(["todoStored", "errorMsg"]),
   },
 
   methods: {
