@@ -11,8 +11,14 @@
       v-model="description"
       label="Description (optional)"
     />
+    <v-row class="pb-3">
+      <v-spacer />
+      <v-col md="6">
+        <v-alert v-if="error" type="error">{{ error }}</v-alert>
+      </v-col>
+      <v-spacer />
+    </v-row>
     <v-btn @click="createNewTodo({ title, description })"> Submit </v-btn>
-    <p class="white--text" v-if="error">{{ error }}</p>
 
     <!-- <h2 class="white--text">Todo List</h2>
     <div
@@ -42,14 +48,20 @@
       <v-list dense>
         <v-subheader>Todo List</v-subheader>
         <v-list-item-group color="primary">
-          <v-list-item class="pa-2" v-for="todo in todoStored" :key="todo.id" router :to="{
-          name: 'TodoDetails',
-          params: {
-            id: todo.id,
-            title: todo.title,
-            description: todo.description,
-          },
-        }">
+          <v-list-item
+            class="pa-2"
+            v-for="todo in todoStored"
+            :key="todo.id"
+            router
+            :to="{
+              name: 'TodoDetails',
+              params: {
+                id: todo.id,
+                title: todo.title,
+                description: todo.description,
+              },
+            }"
+          >
             <v-list-item-content>
               <v-list-item-title v-text="todo.title"></v-list-item-title>
             </v-list-item-content>
