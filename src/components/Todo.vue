@@ -10,7 +10,7 @@
 
     <h2>Todo List</h2>
     <div
-      v-for="todo in todoArray"
+      v-for="todo in todoStored"
       :key="todo.id"
       :style="todo.done ? 'text-decoration: line-through' : ''"
     >
@@ -36,36 +36,22 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "Todo",
   data() {
     return {
-      todoArray: [
-        {
-          id: 1,
-          title: "My first Article",
-          description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-          done: false,
-        },
-        { id: 2, title: "My second Article", description: "", done: false },
-        {
-          id: 3,
-          title: "My third Article",
-          description:
-            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-          done: false,
-        },
-        { id: 4, title: "My fourth Article", description: "", done: false },
-        { id: 5, title: "My fifth Article", description: "", done: false },
-        { id: 6, title: "My sixth Article", description: "", done: false },
-      ],
-      id: 7,
+      todoArray: [],
       title: "",
       description: "",
       error: "",
     };
   },
+  computed: {
+    ...mapState(["todoStored"]),
+  },
+
   methods: {
     moveToTheEnd(id) {
       const index = this.todoArray.findIndex((object) => {
@@ -87,7 +73,11 @@ export default {
         });
       }
     },
+    
   },
+//   created() {
+//     this.getDataFromStore();
+//   },
 };
 </script>
 <style>
