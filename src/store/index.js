@@ -40,7 +40,7 @@ export default new Vuex.Store({
   },
   actions: {
     modifyTodoState(context, id) {
-      context.commit(SET_TODO_STATE, id);
+      context.commit("SET_TODO_STATE", id);
     },
   },
 });

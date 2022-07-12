@@ -6,23 +6,30 @@ Recap of work: @critical
     Step 1
     ☐ List all todos
         ✔ v1 @done(22-07-11 23:43)
+        ✔ v2 in store @done(22-07-12 05:30)
 
     ☐ Display only the title and the checkbox of the todo
         ✔ v1 @done(22-07-11 23:43)
+        ✔ v2 in store @done(22-07-12 05:30)
 
     ☐ Create some fake examples of todos
         ✔ v1 @done(22-07-11 23:43)
+        ✔ v2 in store @done(22-07-12 05:30)
 
     Step 2
 
     ☐ check / uncheck a todo via a checkbox
         ✔ v1 @done(22-07-11 23:43)
+        ✔ v2 in store @done(22-07-12 05:30)
     
     ☐ If a todo is checked, then put it at the end of the list
         ✔ v1 @done(22-07-12 00:35)
+        ✔ v2 in store @done(22-07-12 05:35)
+
     
     ☐ If a todo is checked, then crossed out it <= ( = barré )
         ✔ v1 @done(22-07-12 00:01)
+        ✔ v2 in store @done(22-07-12 05:36)
 
 
 

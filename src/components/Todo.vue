@@ -36,13 +36,15 @@
   </div>
 </template>
 <script>
-import { mapActions, mapState } from "vuex";
+import {
+  mapActions,
+  mapState,
+} from "vuex";
 
 export default {
   name: "Todo",
   data() {
     return {
-      todoArray: [],
       title: "",
       description: "",
       error: "",
@@ -67,11 +69,10 @@ export default {
         });
       }
     },
-    
   },
-//   created() {
-//     this.getDataFromStore();
-//   },
+  //   created() {
+  //     this.getDataFromStore();
+  //   },
 };
 </script>
 <style>
