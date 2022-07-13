@@ -5,7 +5,7 @@
       <v-btn router to='/'>Return to main page</v-btn>
       <h2 class="white--text testDetailsTitle py-3">Title: {{ title }}</h2>
       <p class="white--text testDetailsDesc" v-if="description != ''">Description: {{ description }}</p>
-      <p v-else>Without Description</p>
+      <p class="white--text testDetailsDesc" v-else>Without Description</p>
     </div>
   </div>
 </template>

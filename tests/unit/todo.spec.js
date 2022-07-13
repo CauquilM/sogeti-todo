@@ -40,6 +40,6 @@ describe("Todo", () => {
       localVue,
     });
 
-    expect(wrapper.find(".testToDetails").text()).toEqual("My first Article");
+    expect(wrapper.find(".todoTest").text()).toEqual("My first Article");
   });
 });
